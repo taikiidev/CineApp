@@ -13,9 +13,12 @@ export default function ListaFilmes(){
 
     return(
        <>
-         <h1 className="dark:text-gray-400 text-3xl">Lista de Filmes</h1>
-            <ul className="dark:text-gray-400">
-               {filmes.map((filme, index) => <li key={index}>{filme.title}</li>)}
+         <h1 className="dark:text-gray-400 text-3xl mb-6">Lista de Filmes</h1>
+            <ul className="dark:text-gray-400 grid grid-cols-3 gap-3">
+               {filmes.map((filme, index) => <li className="flex flex-col items-center" key={index}>
+                  <img className="mt-4 mb-4" src={`https://image.tmdb.org/t/p/w200/${filme.poster_path}`}/>
+                  {filme.title}
+                  </li>)}
             </ul>
        </>
     )

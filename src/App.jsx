@@ -13,7 +13,7 @@ const App = () => {
   }
 
   return (
-    <div className="w-screen h-screen sm:px-5 flex flex-col justify-start items-center">
+    <div className="box-border h-screen flex flex-col justify-start items-center">
       <Header user={user?.name} />
       { !!user && <Outlet/> }
       { !!user || <Form onSubmit={submitForm} /> }
