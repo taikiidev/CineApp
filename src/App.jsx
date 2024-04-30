@@ -8,13 +8,13 @@ const App = () => {
   const [user, setUser] = useState()
 
 
-  const submitForm = (user) => {
-    setUser(user)
+  const submitForm = (userName) => {
+    setUser(userName)
   }
 
   return (
     <div className="box-border h-screen flex flex-col justify-start items-center">
-      <Header user={user?.name} />
+      <Header user={user} />
       { !!user && <Outlet/> }
       { !!user || <Form onSubmit={submitForm} /> }
     </div>
