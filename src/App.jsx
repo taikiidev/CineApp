@@ -12,11 +12,13 @@ const App = () => {
     setUser(userName)
   }
 
+
   return (
     <div className="box-border h-screen flex flex-col justify-start items-center">
       <Header user={user} />
-      { !!user && <Outlet/> }
-      { !!user || <Form onSubmit={submitForm} /> }
+      <Outlet/>
+    {/*   { !!user && <Outlet/> }
+      { !!user || <Form onSubmit={submitForm} /> } */}
     </div>
   )
 }
