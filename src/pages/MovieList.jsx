@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Spinner } from "@material-tailwind/react";
+import Movies from "../components/Movies/Movies";
 
-export default function ListaFilmes(){
+
+export default function MovieList(){
 
     const [filmes, setFilmes] = useState([])
     const [isLoading, setIsLoading] = useState(false);
@@ -26,12 +28,7 @@ export default function ListaFilmes(){
          <Spinner className="h-12 w-12" />
          </>
           : null}
-            <ul className="dark:text-gray-400 grid grid-cols-3 gap-3">
-               {filmes.map((filme, index) => <li className="flex flex-col items-center" key={index}>
-                  <img className="mt-4 mb-4" src={`https://image.tmdb.org/t/p/w200/${filme.poster_path}`}/>
-                  {filme.title}
-                  </li>)}
-            </ul>
+          <Movies filmes = {filmes} />
        </>
     )
 }

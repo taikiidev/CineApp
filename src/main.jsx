@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom' 
 import App from './App'
 import './main.css'
-import ListaFilmes from './pages/ListaFilmes'
 import Sobre from './pages/Sobre'
 import Home from './pages/Home'
 import PageNotFound from './pages/PageNotFound'
 import Contato from './pages/Contato'
+import MovieList from './pages/MovieList'
 
 const router = createBrowserRouter([
 {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   element: <App />,
   children: [
     {index: true, element: <Home/>},
-    {path: '/lista-filmes', element: <ListaFilmes/>},
+    {path: '/filmes', element: <MovieList/>},
     {path: '/sobre', element: <Sobre/>},
     {path: '/contato', element: <Contato/>},
     {path: '*', element: <PageNotFound/>},
