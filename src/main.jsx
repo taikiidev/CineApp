@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import PageNotFound from './pages/PageNotFound'
 import Contato from './pages/Contato'
 import MovieList from './pages/MovieList'
+import Movie from './components/Movie/Movie'
 
 const router = createBrowserRouter([
 {
@@ -15,9 +16,10 @@ const router = createBrowserRouter([
   element: <App />,
   children: [
     {index: true, element: <Home/>},
-    {path: '/filmes', element: <MovieList/>},
-    {path: '/sobre', element: <Sobre/>},
-    {path: '/contato', element: <Contato/>},
+    {path: 'filmes', element: <MovieList/>},
+    {path: '/filmes/:id', element: <Movie/>},
+    {path: 'sobre', element: <Sobre/>},
+    {path: 'contato', element: <Contato/>},
     {path: '*', element: <PageNotFound/>},
   ]
 }
