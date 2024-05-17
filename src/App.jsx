@@ -14,7 +14,7 @@ const App = () => {
 
 
   return (
-    <div className="box-border h-screen flex flex-col justify-start items-center">
+    <div className="box-border h-screen flex-col justify-start items-center">
       <Header user={user} />
       <Outlet/>
     {/*   { !!user && <Outlet/> }

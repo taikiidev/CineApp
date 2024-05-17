@@ -4,6 +4,7 @@ import data from '../../../articles.json'
 import Article from '../Article/Article'
 import Input from '../Input/Input'
 
+console.log(data)
 const ArticleList = () => {
   const[searchInput, setSearchInput] = useState('')
   const [filteredArticles, setFilteredArticles ] = useState(data)
