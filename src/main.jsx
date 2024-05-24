@@ -11,6 +11,8 @@ import MovieList from './pages/MovieList'
 import Movie from './components/Movie/Movie'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
+
+
 const router = createBrowserRouter([
 {
   path: '/',
