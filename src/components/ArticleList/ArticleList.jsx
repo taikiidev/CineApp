@@ -4,7 +4,6 @@ import data from '../../../articles.json'
 import Article from '../Article/Article'
 import Input from '../Input/Input'
 
-console.log(data)
 const ArticleList = () => {
   const[searchInput, setSearchInput] = useState('')
   const [filteredArticles, setFilteredArticles ] = useState(data)
@@ -24,14 +23,16 @@ const ArticleList = () => {
 
   return (
     <>
-    <Input 
-      type="text" 
-      name="searchPost" 
-      id="searchPost"
-      value={searchInput}
-      placeholder="Digite para buscar"
-      onChange={handleInputChange}
-       />
+    <div className='text-center'>
+      <Input 
+        type="text" 
+        name="searchPost" 
+        id="searchPost"
+        value={searchInput}
+        placeholder="Digite para buscar"
+        onChange={handleInputChange}
+        />
+    </div>
 
   <div className="pb-20 sm:mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 max-w-[1600px]">
     { filteredArticles.length > 0 ?

@@ -2,12 +2,17 @@ const Article = ({ title, text, tags, image }) => {
   return ( 
   <div 
   className="p-5 bg-gray-200 dark:bg-dark-200 sm:rounded-xl sm:shadow-xl sm:dark:shadow-gray-900 sm:dark:hover:shadow-gray-800 sm:hover:shadow-2xl flex flex-col items-center gap-2">
-    <h1 
-    className="mb-2 text-xl text-brand-200 dark:text-gray-200 font-bold">
-      {title}
-    </h1>
-    { image && <img className="sm:p-4" src={image} /> }
-    <div className="w-full pr-5 flex gap-2 justify-center">
+    { image ? <div className="relative max-w-xl mx-auto mt-5">
+      <img className="h-64 w-full object-cover rounded-md" src={image} alt={title}/>
+      <div className="absolute inset-0 bg-black opacity-60 rounded-md"></div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h2 className="text-white text-center text-xl font-bold">{title}</h2>
+      </div>
+    </div>
+    :
+    <h2 className="text-black text-center text-xl font-bold">{title}</h2>}
+    
+    <div className="w-full pr-5 flex gap-2 justify-center mt-3">
       {
         tags.map(tag => 
         <span 
@@ -22,7 +27,7 @@ const Article = ({ title, text, tags, image }) => {
         text.map((content, index) => 
         <span 
         key={index} 
-        className="text-brand-200 dark:text-gray-400">
+        className="dark:text-gray-400">
         {content}
         </span>)
       }
