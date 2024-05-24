@@ -7,3 +7,10 @@
         font-family: "Montserrat", system-ui, sans-serif;
       }
 }
+
+@layer utilities{
+  .hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

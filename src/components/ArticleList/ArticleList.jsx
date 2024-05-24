@@ -23,7 +23,7 @@ const ArticleList = () => {
 
   return (
     <>
-    <div className='text-center'>
+    <div className='text-center mt-5'>
       <Input 
         type="text" 
         name="searchPost" 

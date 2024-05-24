@@ -4,7 +4,7 @@ import ToggleTheme from "../ToggleTheme/ToggleTheme"
 const Header = ({user, isLogged, button}) => {
   console.log(user)
   return (
-    <div className="p-5 mb-4 w-full bg-black dark:bg-dark-200 flex justify-between items-center">
+    <div className="p-5 w-full bg-black dark:bg-dark-200 flex justify-between items-center">
       {isLogged ?
       ( 
         <>

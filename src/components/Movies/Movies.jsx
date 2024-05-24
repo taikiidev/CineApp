@@ -5,7 +5,7 @@ function Movies({filme}) {
     return ( 
         <>
                   <img className="mt-4 mb-4" src={`https://image.tmdb.org/t/p/w200/${filme.poster_path}`}/>
-                  <h1>{filme.title}</h1>
+                  <h1>{filme.title || filme.name}</h1>
                   <div className="flex items-center">
                   <FaStar /> <span>{filme.vote_average}</span>
                   </div>
