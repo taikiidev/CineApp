@@ -1,6 +1,6 @@
 const Article = ({ title, text, tags, image }) => {
   return ( 
-  <div 
+  <div  
   className="p-5 bg-gray-200 dark:bg-dark-200 sm:rounded-xl sm:shadow-xl sm:dark:shadow-gray-900 sm:dark:hover:shadow-gray-800 sm:hover:shadow-2xl flex flex-col items-center gap-2">
     { image ? <div className="relative max-w-xl mx-auto mt-5">
       <img className="h-64 w-full object-cover rounded-md" src={image} alt={title}/>
