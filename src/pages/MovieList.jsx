@@ -63,6 +63,15 @@ export default function MovieList(){
             </li>
             )}
           </ul>
+          
+          <h1 className="text-4xl text-center my-6 dark:text-gray-400 border-b-2">Em breve: </h1>  
+          <ul className="dark:text-gray-400 grid grid-cols-3 gap-3">
+            {series.map(serie => 
+            <li key={serie.id} id={serie.id} className="flex flex-col items-center" onClick={handleClick}>
+                <Movies filme={serie}/>
+            </li>
+            )}
+          </ul>
        </>
     )
 }

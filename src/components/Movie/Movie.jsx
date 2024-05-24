@@ -18,19 +18,38 @@ function Movie() {
     const url = `https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`;
     return ( 
         <div className='h-screen text-white'>
-            <div className='text-center items-center mb-5 flex gap-3 flex-col justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center' style={{backgroundImage: `url('${url}')`}}>
-            <h1 className='text-7xl'>{movie.title || movie.name}</h1>
-            <h2 className='text-4xl'>{movie.tagline}</h2>
-            <div className="flex items-center">
-            {movie.runtime && <h3 className="mr-2"><FaClock /> </h3>}
-                {movie.runtime && <h3 className='text-2xl'>{movie.runtime} minutos</h3>}
+            <div className="relative max-w-xl mx-auto mt-5"></div>
+            <div className='text-center items-center mb-5 flex gap-5 flex-col justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center' style={{backgroundImage: `url('${url}')`}}>
+            
+         
+            <div className="absolute inset-0 bg-black opacity-60 rounded-md top-28 bottom-24"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col gap-3">
+                    
+                    <h1 className='text-7xl'>{movie.title || movie.name}</h1>
+                    <h2 className='text-4xl'>{movie.tagline}</h2>
+                    <div className="flex items-center">
+                    {movie.runtime && <h3 className="mr-2"><FaClock /> </h3>}
+                        {movie.runtime && <h3 className='text-2xl'>{movie.runtime} minutos</h3>}
+                    </div>
+                    
+                    <div className="flex items-center">
+                        <h4 className="mr-2"><FaStar /> </h4>
+                        <h4 className='text-xl'>{movie.vote_average} votos</h4>
+                    </div>
             </div>
-            <div className="flex items-center">
-                <h4 className="mr-2"><FaStar /> </h4>
-                <h4 className='text-xl'>{movie.vote_average} votos</h4>
-            </div>
+
+
+            
+            
+           
         </div>
-         <p className='text-black p-4'>{movie.overview}</p>
+
+        <div>
+            <h1 className="text-black p-4 text-4xl" >Sinopse</h1>
+            <a href=""><h1 className="text-black p-4 text-4xl">asdasd</h1></a>
+        </div>
+        
+        <p className='text-black p-4'>{movie.overview}</p>
         </div>
     );
 }
