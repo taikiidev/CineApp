@@ -1,5 +1,6 @@
 - Vinicius Taiki 554226
 - Rafael Nascimento 553117
+- Iago Diniz 553776
 
 - Ola professor, eu sei que o codigo nao está dos melhores mas vou resumir aqui as principais alteracoes que eu fiz
 pra facilitar sua correção.
